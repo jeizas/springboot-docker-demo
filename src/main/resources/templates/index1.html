@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>hello world</title>
+
+    <script src="/js/sockjs-0.3.js"></script>
+    <script src="/js/stomp-2.3.3.js"></script>
+    <script src="/js/index1.js"></script>
+
+</head>
+<body>
+<h1>我的测试</h1>
+<div>
+    <div class=".massage">
+        <span class="title">公告：</span>
+        <span id="content">今天放假</span>
+    </div>
+    <div>
+        <button id="connect" onclick="connect();">Connect</button>
+        <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+    </div>
+    <div id="conversationDiv">
+        <p>
+            <label>notice content?</label>
+        </p>
+        <p>
+            <textarea id="name" rows="5"></textarea>
+        </p>
+        <button id="sendName" onclick="sendName();">Send</button>
+        <p id="response"></p>
+    </div>
+</div>
+</body>
+</html>

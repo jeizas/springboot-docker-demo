@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.99.100:3306/student?autoReconnect=true&useSSL=false
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: create #create: if exists, drop it; update/validate
+    show-sql: true
+  mvc:
+    static-path-pattern: /**
