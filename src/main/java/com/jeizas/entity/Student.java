@@ -1,18 +1,18 @@
 package com.jeizas.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.Id;
+//import javax.persistence.Table;
 
 /**
  * Created by jeizas on 2017/1/1.
  */
-@Entity
+//@Entity
 public class Student {
 
-    @Id
-    @GeneratedValue
+//    @Id
+//    @GeneratedValue
     private Integer id;
     private Integer age;
     private String name;
