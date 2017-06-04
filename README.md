@@ -30,3 +30,12 @@ docker ps -a
 ```shell
 docker start [containerId]
 ```
+
+#### 1. docker elaticsearch 的用法
+
+> [Spring Data Elasticsearch Spring Boot version matrix](https://github.com/spring-projects/spring-data-elasticsearch/wiki/Spring-Data-Elasticsearch---Spring-Boot---version-matrix)
+
+##### 1.1 启动
+```shell
+docker run -it  --name test_elasticsearch --privileged -p 9200:9200 -p 9300:9300 -d temp  b73e29ee6896
+```

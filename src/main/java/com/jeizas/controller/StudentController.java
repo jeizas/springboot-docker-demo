@@ -2,6 +2,7 @@ package com.jeizas.controller;
 
 import com.jeizas.dao.StudentMapper;
 import com.jeizas.entity.Student;
+import com.jeizas.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,9 @@ public class StudentController {
 
     @Autowired
     private StudentMapper studentMapper;
+    @Autowired
+    private StudentService studentService;
+
     Map<String, Object> retMap = new HashMap<>();
 
     /**
@@ -54,6 +58,12 @@ public class StudentController {
         retMap.put("obj", studentMapper.findById(id));
         return retMap;
     }
+    @GetMapping(value = "/ela/stu/{name}")
+    public Map<String, Object> findStudentByName(@PathVariable("name") String name) {
+        retMap.put("obj", studentService.findByName(name));
+        return retMap;
+    }
+
 
     /**
      * 删除一条记录
